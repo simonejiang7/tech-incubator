@@ -2,7 +2,7 @@
 
 from langchain_openai import ChatOpenAI
 
-from ..config import Config
+from ai_incubator.config import Config
 
 SYSTEM_PROMPT = (
     "You are a world-class market researcher and startup analyst. "

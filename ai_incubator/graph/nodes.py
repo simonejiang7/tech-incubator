@@ -2,8 +2,8 @@
 
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from ..agents.market_analyst import SYSTEM_PROMPT, get_market_analyst_llm
-from .state import IncubatorGraphState
+from ai_incubator.agents.market_analyst import SYSTEM_PROMPT, get_market_analyst_llm
+from ai_incubator.graph.state import IncubatorGraphState
 
 
 def market_analysis_node(state: IncubatorGraphState):

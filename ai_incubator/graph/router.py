@@ -1,6 +1,6 @@
 """Router for the Incubator Graph."""
 
-from .state import IncubatorGraphState
+from ai_incubator.graph.state import IncubatorGraphState
 
 
 def should_continue(state: IncubatorGraphState):
