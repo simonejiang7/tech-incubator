@@ -1,11 +1,14 @@
 """Main entry point for the AI Incubator application."""
 
 import os
+
 from dotenv import load_dotenv
+
 from ai_incubator.graph import create_incubator_graph
 
 # Load environment variables from .env file
 load_dotenv()
+
 
 def main():
     """
@@ -13,7 +16,12 @@ def main():
     """
     # Ensure API keys are set
     if not os.getenv("OPENAI_API_KEY") or not os.getenv("TAVILY_API_KEY"):
-        print("Error: Make sure to set OPENAI_API_KEY and TAVILY_API_KEY in your .env file.")
+        print(
+            print(
+                "Error: Make sure to set OPENAI_API_KEY and TAVILY_API_KEY "
+                "in your .env file."
+            )
+        )
         return
 
     app = create_incubator_graph()
@@ -33,6 +41,7 @@ def main():
             print(f"--- Event: {key} ---")
             print(value)
             print("\n")
+
 
 if __name__ == "__main__":
     main()

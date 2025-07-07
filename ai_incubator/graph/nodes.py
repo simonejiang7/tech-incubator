@@ -1,9 +1,9 @@
 """Nodes for the Incubator Graph."""
 
-from ..agents.market_analyst import get_market_analyst_llm, SYSTEM_PROMPT
-from ..tools import tavily_tool
+from langchain_core.messages import HumanMessage, SystemMessage
+
+from ..agents.market_analyst import SYSTEM_PROMPT, get_market_analyst_llm
 from .state import IncubatorGraphState
-from langchain_core.messages import SystemMessage, HumanMessage
 
 
 def market_analysis_node(state: IncubatorGraphState):
@@ -19,8 +19,8 @@ def market_analysis_node(state: IncubatorGraphState):
         [
             SystemMessage(content=SYSTEM_PROMPT),
             HumanMessage(
-                content=f"Analyze the market for a startup focused on: {startup_idea}. "
-                f"Use the available tools to gather data."
+                content=f"Analyze the market for a startup focused on: "
+                f"{startup_idea}. Use the available tools to gather data."
             ),
         ]
     )

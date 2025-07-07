@@ -1,9 +1,11 @@
 """Main graph assembly for the AI Incubator."""
 
-from langgraph.graph import StateGraph, END
-from .state import IncubatorGraphState
+from langgraph.graph import END, StateGraph
+
 from .nodes import market_analysis_node
 from .router import should_continue
+from .state import IncubatorGraphState
+
 
 def create_incubator_graph():
     """
@@ -19,9 +21,9 @@ def create_incubator_graph():
         "market_analysis",
         should_continue,
         {
-            "continue": "market_analysis", # This would be a loop in a real scenario
-            "end": END
-        }
+            "continue": "market_analysis",  # Loop in a real scenario
+            "end": END,
+        },
     )
 
     return graph.compile()

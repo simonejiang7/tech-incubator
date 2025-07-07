@@ -2,6 +2,7 @@
 
 from .state import IncubatorGraphState
 
+
 def should_continue(state: IncubatorGraphState):
     """
     Determines whether to continue the analysis or end.
