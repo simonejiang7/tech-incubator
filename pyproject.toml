@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "ai-incubator"
 version = "0.1.0"
@@ -14,7 +18,10 @@ dependencies = [
     "tavily-python>=0.7.9",
 ]
 
-[dependency-groups]
+[project.optional-dependencies]
 dev = [
     "pre-commit>=4.2.0",
 ]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
