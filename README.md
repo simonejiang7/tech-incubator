@@ -28,6 +28,7 @@ This project is a simple framework for analyzing startup ideas using a graph-bas
 
      # For Ollama
      # LLM_PROVIDER="ollama"
+     # OLLAMA_MODEL_NAME="llama3"
      ```
 
 ## Usage

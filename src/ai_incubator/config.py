@@ -8,3 +8,4 @@ class Config:
 
     LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai")
     MODEL_NAME = "gpt-4o"
+    OLLAMA_MODEL_NAME = os.getenv("OLLAMA_MODEL_NAME", "llama3")
