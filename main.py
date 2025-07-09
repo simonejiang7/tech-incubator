@@ -5,6 +5,7 @@ import os
 
 from dotenv import load_dotenv
 
+from ai_incubator.config import Config
 from ai_incubator.graph import create_incubator_graph
 
 # Load environment variables from .env file
@@ -22,10 +23,12 @@ def main():
     Main function to run the AI Incubator.
     """
     # Ensure API keys are set
-    if not os.getenv("OPENAI_API_KEY") or not os.getenv("TAVILY_API_KEY"):
+    if Config.LLM_PROVIDER == "openai" and (
+        not os.getenv("OPENAI_API_KEY") or not os.getenv("TAVILY_API_KEY")
+    ):
         logger.error(
             "Error: Make sure to set OPENAI_API_KEY and TAVILY_API_KEY "
-            "in your .env file."
+            "in your .env file when using the 'openai' provider."
         )
         return
 

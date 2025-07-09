@@ -17,10 +17,17 @@ This project is a simple framework for analyzing startup ideas using a graph-bas
 
 3. **Set up your environment variables:**
    - Create a `.env` file in the root of the project.
-   - Add your API keys to the `.env` file:
+   - Add your API keys to the `.env` file.
+   - By default, the project uses OpenAI. To use Ollama, set the `LLM_PROVIDER` variable to `ollama`.
+
      ```
+     # For OpenAI (default)
+     LLM_PROVIDER="openai"
      OPENAI_API_KEY="your-openai-api-key"
      TAVILY_API_KEY="your-tavily-api-key"
+
+     # For Ollama
+     # LLM_PROVIDER="ollama"
      ```
 
 ## Usage
