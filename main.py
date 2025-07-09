@@ -3,13 +3,8 @@
 import logging
 import os
 
-from dotenv import load_dotenv
-
 from ai_incubator.config import Config
 from ai_incubator.graph import create_incubator_graph
-
-# Load environment variables from .env file
-load_dotenv()
 
 # Configure logging
 logging.basicConfig(

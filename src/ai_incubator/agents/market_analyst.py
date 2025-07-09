@@ -1,6 +1,6 @@
 """Market Analyst Agent for the AI Incubator."""
 
-from langchain_community.chat_models import ChatOllama
+from langchain_ollama import ChatOllama
 from langchain_openai import ChatOpenAI
 
 from ai_incubator.config import Config
