@@ -14,5 +14,9 @@ SYSTEM_PROMPT = (
 def get_market_analyst_llm():
     """Returns a ChatOpenAI instance for the market analyst."""
     if Config.LLM_PROVIDER == "ollama":
-        return ChatOllama(model=Config.OLLAMA_MODEL_NAME, temperature=0)
+        return ChatOllama(
+            model=Config.OLLAMA_MODEL_NAME,
+            temperature=0,
+            timeout=30,  # Add 30 second timeout
+        )
     return ChatOpenAI(model=Config.MODEL_NAME, temperature=0)

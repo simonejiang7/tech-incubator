@@ -19,8 +19,7 @@ def market_analysis_node(state: IncubatorGraphState):
         [
             SystemMessage(content=SYSTEM_PROMPT),
             HumanMessage(
-                content=f"Analyze the market for a startup focused on: "
-                f"{startup_idea}. Use the available tools to gather data."
+                content=f"Briefly analyze the market potential for: {startup_idea}"
             ),
         ]
     )
