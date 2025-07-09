@@ -28,7 +28,12 @@ This project is a simple framework for analyzing startup ideas using a graph-bas
 
      # For Ollama
      # LLM_PROVIDER="ollama"
-     # OLLAMA_MODEL_NAME="llama3"
+     # OLLAMA_MODEL_NAME="gemma3:4b" # Or any other Ollama model, e.g., llama3, mistral, etc.
+     ```
+
+   - **Download the Ollama model:** Before running with Ollama, ensure you have the desired model downloaded. For example, to download `gemma3:4b`:
+     ```bash
+     ollama run gemma3:4b
      ```
 
 ## Usage
