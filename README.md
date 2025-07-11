@@ -23,12 +23,10 @@ This project is a simple framework for analyzing startup ideas using a graph-bas
      ```
      # For OpenAI (default)
      LLM_PROVIDER="openai"
+     MODEL_NAME="gpt-4o"
+     OLLAMA_MODEL_NAME="gemma2:9b"
      OPENAI_API_KEY="your-openai-api-key"
      TAVILY_API_KEY="your-tavily-api-key"
-
-     # For Ollama
-     # LLM_PROVIDER="ollama"
-     # OLLAMA_MODEL_NAME="gemma3:4b" # Or any other Ollama model, e.g., llama3, mistral, etc.
      ```
 
    - **Download the Ollama model:** Before running with Ollama, ensure you have the desired model downloaded. For example, to download `gemma3:4b`:

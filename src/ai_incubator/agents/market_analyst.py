@@ -3,7 +3,7 @@
 from langchain_ollama import ChatOllama
 from langchain_openai import ChatOpenAI
 
-from ai_incubator.config import Config
+from ai_incubator.config import settings
 
 SYSTEM_PROMPT = (
     "You are a world-class market researcher and startup analyst. "
@@ -13,10 +13,10 @@ SYSTEM_PROMPT = (
 
 def get_market_analyst_llm():
     """Returns a ChatOpenAI instance for the market analyst."""
-    if Config.LLM_PROVIDER == "ollama":
+    if settings.llm_provider == "ollama":
         return ChatOllama(
-            model=Config.OLLAMA_MODEL_NAME,
+            model=settings.ollama_model_name,
             temperature=0,
             timeout=30,  # Add 30 second timeout
         )
-    return ChatOpenAI(model=Config.MODEL_NAME, temperature=0)
+    return ChatOpenAI(model=settings.model_name, temperature=0)
