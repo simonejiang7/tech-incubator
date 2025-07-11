@@ -3,7 +3,7 @@
 import logging
 import os
 
-from ai_incubator.config import Config
+from ai_incubator.config import settings
 from ai_incubator.graph import create_incubator_graph
 
 # Configure logging
@@ -18,7 +18,7 @@ def main():
     Main function to run the AI Incubator.
     """
     # Ensure API keys are set
-    if Config.LLM_PROVIDER == "openai" and (
+    if settings.llm_provider == "openai" and (
         not os.getenv("OPENAI_API_KEY") or not os.getenv("TAVILY_API_KEY")
     ):
         logger.error(

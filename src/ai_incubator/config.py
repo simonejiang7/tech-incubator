@@ -1,15 +1,18 @@
 """Configuration for the AI Incubator project."""
 
-import os
-
-from dotenv import load_dotenv
-
-load_dotenv()
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-class Config:
+class Settings(BaseSettings):
     """Simple configuration class."""
 
-    LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai")
-    MODEL_NAME = "gpt-4o"
-    OLLAMA_MODEL_NAME = os.getenv("OLLAMA_MODEL_NAME", "gemma3:4b")
+    model_config = SettingsConfigDict(
+        env_file=".env", env_file_encoding="utf-8", extra="ignore"
+    )
+
+    llm_provider: str = "openai"
+    model_name: str = "gpt-4o"
+    ollama_model_name: str = "gemma2:9b"
+
+
+settings = Settings()
