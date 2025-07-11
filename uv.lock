@@ -17,6 +17,7 @@ dependencies = [
     { name = "langchain-openai" },
     { name = "langchain-tavily" },
     { name = "langgraph" },
+    { name = "pydantic-settings" },
     { name = "python-dotenv" },
     { name = "tavily-python" },
 ]
@@ -42,6 +43,7 @@ requires-dist = [
     { name = "langchain-tavily", specifier = ">=0.2.7" },
     { name = "langgraph", specifier = ">=0.5.1" },
     { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.2.0" },
+    { name = "pydantic-settings", specifier = ">=2.3.4" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3.2" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "tavily-python", specifier = ">=0.7.9" },
